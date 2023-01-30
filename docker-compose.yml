@@ -1,0 +1,15 @@
+version: "3.0"
+services:
+  forntendapp:
+    build: 
+     dockerfile: Dockerfile
+     context: ./frontendapp
+    ports:
+      - "3000:3000"
+  backendapp:
+      build: 
+        dockerfile: Dockerfile
+        context: ./backendapp
+      ports:
+        - "8080:8080"    
+     
