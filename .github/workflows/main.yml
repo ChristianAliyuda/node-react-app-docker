@@ -8,8 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        repository: "kamrankamrankha/node-react-app-docker"
+        repository: kamrankamrankha/node-react-app-docker
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        destination_branch: "main"
+        destination_branch: main
