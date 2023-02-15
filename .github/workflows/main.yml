@@ -16,10 +16,9 @@ jobs:
       branch: "auto-pr-branch"
       base: master
       title: "demo for auto pr"
-      committer_name: kamrankamrankhan
-      committer_email: kamrankamrankhan825@gmail.com
-      author_name: kamrankamrankhan
-      author-email: kamrankamrankhan825@gmail.com
+      committer: kamrankamrankhan
+      committer-message: first commit
+      author: kamrankamrankhan
       body:
        This is to show automatic pr creation
       token: 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
