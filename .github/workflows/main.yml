@@ -10,9 +10,6 @@ jobs:
    - name: checking out code
      uses: actions/checkout@v2
      
-   - name: extract git commit data
-     uses: node-react-app-docker.git /git-commit-data-action@v1.x
-     
    - name: update author information
      run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
      
