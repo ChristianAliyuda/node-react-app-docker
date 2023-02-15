@@ -17,7 +17,6 @@ jobs:
       base: master
       title: "demo for auto pr"
       committer: kamrankamrankhan
-      committer-message: first commit
       author: kamrankamrankhan
       body:
        This is to show automatic pr creation
