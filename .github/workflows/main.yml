@@ -25,5 +25,5 @@ jobs:
       author-email: kamrankamrankhan825@gmail.com
       body:
        This is to show automatic pr creation
-      token: ${{ secrets.GITHUB_TOKEN }}
+      token: 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
       delete-branch: true 
