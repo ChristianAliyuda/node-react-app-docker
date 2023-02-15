@@ -17,7 +17,7 @@ jobs:
       base: master
       title: "demo for auto pr"
       committer: kamrankamrankhan
-      author: kamrankamrankhan
+      author: kamran khan
       body:
        This is to show automatic pr creation
       token: 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
