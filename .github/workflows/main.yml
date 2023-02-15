@@ -10,9 +10,6 @@ jobs:
    - name: checking out code
      uses: actions/checkout@v2
      
-   - name: update author information
-     run:  kamrankamrankhan
-     
    - name: Raise PR
      uses: peter-evans/create-pull-request@v3
      with:
