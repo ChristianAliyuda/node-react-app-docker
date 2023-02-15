@@ -11,7 +11,7 @@ jobs:
      uses: actions/checkout@v2
      
    - name: extract git commit data
-     uses: rlespinasse/git-commit-data-actions@1.x
+     uses: node-react-app-docker/git-commit-data-actions@1.x
      
    - name: update author information
      run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
