@@ -1,24 +1,14 @@
 on:
- push:
-  branches:
-   - master
-   
+  push:
+    branches:
+    - master
+
 jobs:
- updateAuthor:
-  runs-on: ubuntu-latest
-  steps:
-   - name: checking out code
-     uses: actions/checkout@v2
-     
-   - name: Raise PR
-     uses: peter-evans/create-pull-request@v3
-     with:
-      branch: "auto-pr-branch"
-      base: master
-      title: "demo for auto pr"
-      committer: kamrankamrankhan
-      author: kamran khan
-      body:
-       This is to show automatic pr creation
-      token: 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
-      delete-branch: true 
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "main"
