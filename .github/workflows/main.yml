@@ -1,19 +1,20 @@
-on:
-  push:
-    branches:
-    - "master"  # Support wildcard matching
+name: Node.js CI
+
+on: [push]
 
 jobs:
-  pull-request:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: pull-request
-      uses: repo-sync/pull-request@v2
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v2
       with:
-        source_branch: "master"                                 # If blank, default: triggered branch
-        destination_branch: "main"                      # If blank, default: master
-        pr_title: "Pulling ${{ github.ref }} into main" # Title of pull request
-        pr_body: |                                        # Full markdown support, requires pr_title to be set
-          :crown: *An automated PR*
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        node-version: '12.x'
+    - name: cd into dir
+      run: cd backendapp
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: npm test
+
